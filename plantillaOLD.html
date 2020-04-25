@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!--  meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <title>Plantilla</title>
+    <style>
+        .cant_form{
+            width: 80px;
+        }
+        .dropdown-item:hover{
+            background: rgba(100,100,100,.5)
+        }
+    </style>
+    <script>
+        $(document).ready(function(evento){
+            var agregar = 0;
+            var validacion;
+            var sumatotal = 0;
+            var cant_checks = 0;
+            var val_bl, val_na = 0, val_ros = 0, val_m = 0, val_az = 0, val_v = 0, val_am = 0, val_ne = 0, val_roj = 0, val_c, val_ac = 0;
+     //----------------------------------------Validacion Individual-naranja--------------------------------       
+            $("#blanco").change(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#blanco").prop("checked",false);
+                    $("#total_al").focus();
+                    
+                }
+                else{
+                var check = $(this).is(":checked");
+                if(check==true){
+                  $("#input_bl").prop("readonly", false);
+                    cant_checks++;
+                }
+                else if(check==false){
+                  $("#input_bl").prop("readonly", true);
+                    $("#input_bl").val("0");
+                    cant_checks--;
+                    $("#input_bl").change();
+                }
+                }
+            });      
+            $("#input_na").change(function(evento){
+                val_na= parseInt($("#input_na").val());
+            
+            });
+     
+      //----------------------------------------------------------------------------------------------------
+     //----------------------------------------Validacion Individual-naranja--------------------------------       
+            $("#naranja").change(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#naranja").prop("checked",false);
+                    $("#total_al").focus();
+                    
+                }
+                else{
+                var check = $(this).is(":checked");
+                if(check==true){
+                  $("#input_na").prop("readonly", false);
+                    cant_checks++;
+                }
+                else if(check==false){
+                  $("#input_na").prop("readonly", true);
+                    $("#input_na").val("0");
+                    cant_checks--;
+                    $("#input_na").change();
+                }
+                }
+            });      
+            $("#input_na").change(function(evento){
+                val_na= parseInt($("#input_na").val());
+            
+            });
+     
+      //----------------------------------------------------------------------------------------------------
+     //----------------------------------------Validacion Individual-rosa-----------------------------------       
+            $("#rosa").change(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#rosa").prop("checked",false);
+                    $("#total_al").focus();
+                    
+                }
+                else{
+                var check = $(this).is(":checked");
+                if(check==true){
+                  $("#input_ros").prop("readonly", false);
+                    cant_checks++;
+                }
+                else if(check==false){
+                  $("#input_ros").prop("readonly", true);
+                    $("#input_ros").val("0");
+                    cant_checks--;
+                    $("#input_ros").change();
+                }
+                }
+            }); 
+     
+      //---------------------------------------------------------------------------------------------------- 
+     //----------------------------------------Validacion Individual-morado---------------------------------       
+            $("#morado").change(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#morado").prop("checked",false);
+                    $("#total_al").focus();
+                    
+                }
+                else{
+                var check = $(this).is(":checked");
+                if(check==true){
+                  $("#input_m").prop("readonly", false);
+                    cant_checks++;
+                }
+                else if(check==false){
+                  $("#input_m").prop("readonly", true);
+                    $("#input_m").val("0");
+                    cant_checks--;
+                    $("#input_m").change();
+                }
+                }
+            });  
+     
+      //---------------------------------------------------------------------------------------------------- 
+     //----------------------------------------Validacion Individual-azul-----------------------------------       
+            $("#azul").change(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#azul").prop("checked",false);
+                    $("#total_al").focus();
+                    
+                }
+                else{
+                var check = $(this).is(":checked");
+                if(check==true){
+                  $("#input_az").prop("readonly", false);
+                    cant_checks++;
+                }
+                else if(check==false){
+                  $("#input_az").prop("readonly", true);
+                    $("#input_az").val("0");
+                    cant_checks--;
+                    $("#input_az").change();
+                }
+                }
+            }); 
+     
+      //---------------------------------------------------------------------------------------------------- 
+     //----------------------------------------Validacion Individual-verde----------------------------------       
+            $("#verde").change(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#verde").prop("checked",false);
+                    $("#total_al").focus();
+                    
+                }
+                else{
+                var check = $(this).is(":checked");
+                if(check==true){
+                  $("#input_v").prop("readonly", false);
+                    cant_checks++;
+                }
+                else if(check==false){
+                  $("#input_v").prop("readonly", true);
+                    $("#input_v").val("0");
+                    cant_checks--;
+                    $("#input_v").change();
+                }
+                }
+            });  
+     
+      //---------------------------------------------------------------------------------------------------- 
+     //----------------------------------------Validacion Individual-amarillo-------------------------------       
+            $("#amarillo").change(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#amarillo").prop("checked",false);
+                    $("#total_al").focus();
+                    
+                }
+                else{
+                var check = $(this).is(":checked");
+                if(check==true){
+                  $("#input_am").prop("readonly", false);
+                    cant_checks++;
+                }
+                else if(check==false){
+                  $("#input_am").prop("readonly", true);
+                    $("#input_am").val("0");
+                    cant_checks--;
+                    $("#input_am").change();
+                }
+                }
+            }); 
+     
+      //---------------------------------------------------------------------------------------------------- 
+     //----------------------------------------Validacion Individual-negro----------------------------------       
+            $("#negro").change(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#negro").prop("checked",false);
+                    $("#total_al").focus();
+                    
+                }
+                else{
+                var check = $(this).is(":checked");
+                if(check==true){
+                  $("#input_ne").prop("readonly", false);
+                    cant_checks++;
+                }
+                else if(check==false){
+                  $("#input_ne").prop("readonly", true);
+                    $("#input_ne").val("0");
+                    cant_checks--;
+                    $("#input_ne").change();
+                }
+                }
+            });
+     
+      //---------------------------------------------------------------------------------------------------- 
+     //----------------------------------------Validacion Individual-rojo-----------------------------------       
+            $("#rojo").change(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#rojo").prop("checked",false);
+                    $("#total_al").focus();
+                    
+                }
+                else{
+                var check = $(this).is(":checked");
+                if(check==true){
+                  $("#input_roj").prop("readonly", false);
+                    cant_checks++;
+                }
+                else if(check==false){
+                  $("#input_roj").prop("readonly", true);
+                    $("#input_roj").val("0");
+                    cant_checks--;
+                    $("#input_roj").change();
+                }
+                }
+            }); 
+     
+      //---------------------------------------------------------------------------------------------------- 
+     //----------------------------------------Validacion Individual-cafe-----------------------------------       
+            $("#cafe").change(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#cafe").prop("checked",false);
+                    $("#total_al").focus();
+                    
+                }
+                else{
+                var check = $(this).is(":checked");
+                if(check==true){
+                  $("#input_c").prop("readonly", false);
+                    cant_checks++;
+                }
+                else if(check==false){
+                  $("#input_c").prop("readonly", true);
+                    $("#input_c").val("0");
+                    cant_checks--;
+                    $("#input_c").change();
+                }
+                }
+            });  
+     
+      //---------------------------------------------------------------------------------------------------- 
+     //----------------------------------------Validacion Individual-acua-----------------------------------       
+            $("#acua").change(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#acua").prop("checked",false);
+                    $("#total_al").focus();
+                    
+                }
+                else{
+                var check = $(this).is(":checked");
+                if(check==true){
+                  $("#input_ac").prop("readonly", false);
+                    cant_checks++;
+                }
+                else if(check==false){
+                  $("#input_ac").prop("readonly", true);
+                    $("#input_ac").val("0");
+                    cant_checks--;
+                    $("#input_ac").change();
+                }
+                }
+            });
+     
+      //---------------------------------------------------------------------------------------------------- 
+      //-----------------------------------DIV->falta por agregar (html)----------------------------------- 
+            $(".cant_form").change(function(evento){
+                var inp_t = parseInt($("#total_al").val());
+                var sum = 0;
+                $(".cant_form").each(function(index, value){
+                    sum = sum + eval($(this).val());
+                });
+                var agregar = inp_t-sum;
+                parseInt(agregar);
+                $("#texto_faltantes").html("falta por agregar <strong>"+agregar+"</strong> algodon(es)");
+                
+                    $("#hid").val(agregar);
+            });
+      //---------------------------------------------------------------------------------------------------- 
+      //----------------------------------------Boton partes iguales----------------------------------------  
+            $("#btn_pi").click(function(evento){
+                validacion = $("#total_al").val();
+                if(validacion == ""){
+                    alert("Necesitas poner la cantidad de algodones para el pedido");
+                    $("#total_al").focus();
+                }
+                else{
+                var v_bl = $("#blanco").is(":checked");
+                var v_na = $("#naranja").is(":checked");
+                var v_ros = $("#rosa").is(":checked");
+                var v_m = $("#morado").is(":checked");
+                var v_az = $("#azul").is(":checked");
+                var v_v = $("#verde").is(":checked");
+                var v_am = $("#amarillo").is(":checked");
+                var v_ne = $("#negro").is(":checked");
+                var v_roj = $("#rojo").is(":checked");
+                var v_c = $("#cafe").is(":checked");
+                var v_ac = $("#acua").is(":checked");
+                
+                var division = parseInt($("#total_al").val())/(cant_checks);
+                //division = Math.trunc(division);
+                var d_int = parseInt(division);
+                
+                if(v_bl == true){
+                   $("#input_bl").val(d_int);
+                   }
+                if(v_na == true){
+                   $("#input_na").val(d_int);
+                   }
+                if(v_ros == true){
+                   $("#input_ros").val(d_int);
+                   }
+                if(v_m == true){
+                   $("#input_m").val(d_int);
+                   }
+                if(v_az == true){
+                   $("#input_az").val(d_int);
+                   }
+                if(v_v == true){
+                   $("#input_v").val(d_int);
+                   }
+                if(v_am == true){
+                   $("#input_am").val(d_int);
+                   }
+                if(v_ne == true){
+                   $("#input_ne").val(d_int);
+                   }
+                if(v_roj == true){
+                   $("#input_roj").val(d_int);
+                   }
+                if(v_c == true){
+                   $("#input_c").val(d_int);
+                   }
+                if(v_ac == true){
+                   $("#input_ac").val(d_int);
+                   }
+                
+                var inp_t = parseInt($("#total_al").val());
+                var sum = 0;
+                $(".cant_form").each(function(index, value){
+                    sum = sum + eval($(this).val());
+                });
+                agregar = inp_t-sum;
+                parseInt(agregar);
+                $("#texto_faltantes").html("falta por agregar <strong>"+agregar+"</strong> algodon(es)");
+                    $("#hid").val(agregar);
+                }
+            });
+            //-----------------------Validar antes de enviar contenido de formulario-----------------------
+            $("#formulario").submit(function() {
+                var falta = $("#hid").val();
+                if (falta == 0) {		
+                    return true;
+                } else {
+                    alert("Hay algodones sin repartir");
+                    return false;
+                }
+                    			
+            });
+        });
+    </script>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Dinastia Castro</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Principal<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link dropdown-toggle  active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ordenes</a>
+        <div class="dropdown-menu  bg-dark" >
+          <a class="dropdown-item" href="#" style="color:#fff;">Agendar pedido</a>
+          <a class="dropdown-item" href="#" style="color:#fff;">Por confirmar</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" style="color:#fff;">Todas las ordenes</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">A trabajar</a>
+        <div class="dropdown-menu  bg-dark" >
+          <a class="dropdown-item" href="#" style="color:#fff;">Ordenes de la semana</a>
+          <a class="dropdown-item" href="#" style="color:#fff;">Material necesario (aprox)</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" style="color:#fff;">Para el algodonero</a>
+        </div>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link ml-auto" href="php/logout.php">Salir</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+<div class="container mt-5 p-2">
+<div class="">
+   <div class="row">
+       <div class="col-12 col-md-6 offset-md-3"><h1>Agendar Pedido</h1></div>
+   </div>
+    <form action="php/registrarpedido.php" class="form-horizontal" id="formulario" method="post">
+        <div class="form-group"><label for="fecha" class="control-label">Fecha:*</label><input type="date" id="fecha" class="form-control" name="fecha" required></div>
+        <div class="form-group"><label for="hora" class="control-label">Hora:*</label><input type="time" id="hora" class="form-control" name="hr" required></div>
+        <div class="form-group"><label for="tipo_ent" class="control-label">Tipo de entrega:</label>
+            <select name="t_ent" id="tipo_ent" class="form-control">
+                <option value="Arco grande">Arco grande</option>
+                <option value="Arco mini">Arco mini</option>
+                <option value="Torre grande">Torre grande</option>
+                <option value="Torre mini">Torre mini</option>
+                <option value="Pz grande">Pieza grande suelta</option>
+                <option value="Pz chica">Pieza chica suelta</option>
+                <option value="Vaso">Vaso</option>
+                <option value="En vivo">En vivo</option>
+            </select>
+        </div>
+        <div class="form-group"><label for="total_al" class="control-label">Algodones totales:*</label><input type="number" id="total_al" class="form-control" name="alg_tot" maxlength="4" placeholder="" required></div>
+        
+        <div class="form-group">
+            <label for="color" class="control-label">Color(es):*</label>
+            <ul>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="blanco" value="blanco"><label for="blanco" class="control-label">Blanco</label>
+                    <ul>
+                        <li><label for="input_bl" class="control-label">Cantidad:</label><input type="number" class="form-control cant_form" id="input_bl" name="cant_bl" value="0" min="0" readonly></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="naranja"  value="naranja"><label for="naranja" class="control-label">Naranja</label>
+                    <ul>
+                        <li><label for="input_na" class="control-label">Cantidad:</label><input type="number" class="form-control cant_form" id="input_na" name="cant_na" value="0" min="0" readonly></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="rosa"  value="rosa"><label for="rosa" class="control-label">Rosa</label>
+                    <ul>
+                        <li><label for="input_ros" class="control-label">Cantidad:</label><input type="number" class="form-control cant_form" id="input_ros" name="cant_ros" value="0" min="0" readonly></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="morado" value="morado"><label for="morado" class="control-label">Morado</label>
+                    <ul>
+                        <li><label for="input_m" class="control-label">Cantidad:</label><input type="number" class="form-control cant_form" id="input_m" name="cant_m" value="0" min="0" readonly></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="azul"  value="azul"><label for="azul" class="control-label">Azul</label>
+                    <ul>
+                        <li><label for="input_az" class="control-label">Cantidad:</label><input type="number" class="form-control cant_form" id="input_az" name="cant_az" value="0" min="0" readonly></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="verde" value="verde"><label for="verde" class="control-label">Verde</label>
+                    <ul>
+                        <li><label for="input_v" class="control-label">Cantidad:</label><input type="number" class="form-control cant_form" id="input_v" name="cant_v" value="0" min="0" readonly></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="amarillo"  value="amarillo"><label for="amarillo" class="control-label">Amarillo</label>
+                    <ul>
+                        <li><label for="input_am" class="control-label">Cantidad:</label><input type="number" class="form-control cant_form" id="input_am" name="cant_am" value="0" min="0" readonly></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="negro"  value="negro"><label for="negro" class="control-label">Negro</label>
+                    <ul>
+                        <li><label for="input_ne" class="control-label">Cantidad:</label><input type="number" class="form-control cant_form" id="input_ne" name="cant_ne" value="0" min="0" readonly></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="rojo"  value="rojo"><label for="rojo" class="control-label">Rojo</label>
+                    <ul>
+                        <li><label for="input_roj" class="control-label">Cantidad:</label><input type="number" class="form-control cant_form" id="input_roj" name="cant_roj" value="0" min="0" readonly></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="cafe"  value="cafe"><label for="cafe" class="control-label">Cafe</label>
+                    <ul>
+                        <li><label for="input_c" class="control-label">Cantidad:</label><input type="number" class="form-control cant_form" id="input_c" name="cant_c" value="0" min="0" readonly></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="acua"  value="acua"><label for="acua" class="control-label">Acua</label>
+                    <ul>
+                        <li><label for="input_ac" class="control-label">Cantidad:</label><input type="number" class="form-control cant_form" id="input_ac" name="cant_ac" value="0" min="0" readonly></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <div class="btn btn-success" id="btn_pi">Partes iguales</div>
+            <div class="" id="texto_faltantes"></div>
+            <input type="hidden" id="hid">
+        </div>
+        <div class="form-group"><label for="tono" class="control-label">Tono:</label>
+            <select name="tono_c" id="tono" class="form-control">
+                <option value="Normal">Fuerte</option>
+                <option value="Normal" selected>Normal</option>
+                <option value="Pastel">Pastel</option>
+            </select>
+        </div>
+        <div class="form-group"><label for="direccion" class="control-label">Direcci&oacute;n:*</label><input type="text" id="direccion" class="form-control" name="dir" required maxlength="100"></div>
+        <div class="form-group"><label for="cliente" class="control-label">Cliente:*</label><input type="text" id="cliente" class="form-control" name="clie" required maxlength="100"></div>
+        <div class="form-group"><label for="numero" class="control-label">N&uacute;mero:*</label><input type="text" id="numero" class="form-control" name="num" maxlength="50" required placeholder="Puedes gregar hasta 4 numeros: 656432432,656534234"></div>
+        <div class="form-group"><label for="" class="control-label">Nombre en facebook:</label><input type="text" id="" class="form-control" maxlength="30" name="nom_fb"></div>
+        <div class="form-group"><label for="observaciones" class="control-label">Observaciones:</label><textarea name="obs" id="observaciones" cols="30" rows="10" class="form-control" maxlength="300"></textarea></div>
+        <div class="row">
+            <div class="col-6 offset-3 col-md-4 offset-md-4">
+                <button class="btn btn-dark btn-block">Agendar</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
